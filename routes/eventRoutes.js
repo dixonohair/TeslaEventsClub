@@ -17,8 +17,5 @@ router.put('/:id', controller.update);
 
 router.delete('/:id', controller.delete);
 
-router.get('/about', controller.about);
-
-router.get('/contact', controller.contact);
 
 module.exports = router;

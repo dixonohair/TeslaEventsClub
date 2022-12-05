@@ -115,12 +115,4 @@ exports.delete = (req, res, next)=>{
     
 };
 
-exports.about = (req, res)=>{
-    res.render('pages/about');
-    
-}
 
-exports.contact = (req, res)=>{
-    res.render('pages/contact');
-    
-}

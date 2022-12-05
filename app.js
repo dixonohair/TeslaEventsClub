@@ -4,6 +4,7 @@ const morgan = require('morgan')
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const eventRoutes = require('./routes/eventRoutes');
+const mainRoutes = require('./routes/mainRoutes');
 
 
 // create app
@@ -33,18 +34,10 @@ app.use(morgan('tiny'));
 
 //set up routes
 
-app.get('/', (req, res)=>{
-    res.render('pages/index');
-})
-
-app.get('/contact', (req, res)=>{
-    res.render('pages/contact');
-})
-app.get('/about', (req, res)=>{
-    res.render('pages/about');
-})
+app.use('/', mainRoutes);
 
 app.use('/connections', eventRoutes);
+
 
 app.use((req, res, next) =>{
     let err = new Error('The server cannot locate ' + req.url);
