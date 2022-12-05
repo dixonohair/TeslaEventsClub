@@ -1,0 +1,49 @@
+<%- include('../partials/header.ejs')%>
+      
+        <section>
+            <div class = "content">
+                <form method ="POST" action = "/connections/<%= event.id%>/?_method=PUT">
+                    <table>
+                        <tr>
+                            <td><label for="name" >Name</label></td>
+                            <td><input type="text" id="name" name="name" value = "<%= event.name%>" class = "fixed-width" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="topic" >Topic</label></td>
+                            <td><input type="text" id="topic" name="topic" value = "<%= event.topic%>" class = "fixed-width" required></td>
+                        </tr>
+                        <tr><td class = "align-top"><label for="details">Details</label></td>
+                            <td><textarea rows="5" id="content" name="details" class = "fixed-width" required minlength="10"><%= event.details%></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label for="date" >Date</label></td>
+                            <td><input type="date" value="2022-11-23" id="date" name="date" value = "<%= event.date%>" class = "fixed-width" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="start" >Start</label></td>
+                            <td><input type="time" id="start" name="start" value = "<%= event.start%>" class = "fixed-width" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="end" >End</label></td>
+                            <td><input type="time" id="end" name="end" value = "<%= event.end%>" class = "fixed-width" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="host" >Host</label></td>
+                            <td><input type="text" id="host" name="host" value = "<%= event.host%>" class = "fixed-width" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="image" >Image URL</label></td>
+                            <td><input type="url" id="image" name="image" value = "<%= event.image%>" class = "fixed-width" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class = "align-right"><button>Submit</button></td>
+                        </tr>
+                        </table>        
+                </form>
+            
+                </div>
+           
+        </section>
+
+
+<%- include('../partials/footer.ejs')%>

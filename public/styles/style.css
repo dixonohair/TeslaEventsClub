@@ -1,0 +1,123 @@
+body{
+    font-family: ogg;
+    color: red;
+    background-color: white;
+}
+
+header{
+    align-items: center;
+    background-color: black;
+    top:0;
+    left: 0;
+    right: 0;
+    display: flex;
+    position: fixed;
+}
+#account{
+    margin: 40px;
+    
+}  
+
+
+#logo{
+    width: 80px;
+    height: 90px;
+}
+main{
+    margin-top: 100px;
+    text-align: center;
+}
+
+section{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+}
+a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+
+
+#general{
+    margin-left: -10px;
+    margin-top: -2px;
+    background-color: black;
+    font-size: 20px;
+    width: 200px;
+    height: 30px;
+}
+
+#form{
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    justify-content: center;
+}
+#form label{
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 50px;
+}
+
+.connect {
+    text-align: left;
+}
+.connect ul{
+    list-style: none;
+    font-size: 20px;
+}
+.connect li{
+    margin: 10px 0;
+}
+
+.connect a:hover{
+    color: black;
+}
+
+#flag{
+    width: 200px;
+    height: 125px;
+}
+
+#event{
+   left: 20;
+}
+#event ul{
+    list-style: none;
+}
+
+#buttons{
+    top: 20%;
+    right: 10%;
+    position: absolute;
+    
+}
+
+button{
+    background-color: red;
+    color: white;
+    height: 40px;
+    width: 80px;
+    left: 0;
+}
+button:hover{
+    background-color: white;
+    color: red;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    font-size: 20px;
+    height: 40px;
+    text-align: center;
+    line-height: 5px;
+}

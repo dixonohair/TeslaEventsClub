@@ -1,0 +1,22 @@
+<%- include('../partials/header.ejs')%>
+
+   
+        
+        <div class="connect">
+            <%if(events.length){%>
+                <h2>Select an Event</h2>
+                        <% for(var j=0; j<events.length; j++){%>
+                            <h3><%= events[j].topic%></h3>
+                            <% for(var i=0; i<events.length; i++){
+                                if(events[j].topic == events[i].topic){%>
+                                <a href = "/connections/<%= events[i].id%>"><p><%= events[i].name%></p></a>
+                    <% }     
+             }}
+            } else {%>
+                <p>There are no stories to display</p>
+            <%}%>
+        
+        </div>
+     
+
+<%- include('../partials/footer.ejs')%>

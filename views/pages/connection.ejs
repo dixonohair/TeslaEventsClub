@@ -1,0 +1,23 @@
+
+<%- include('../partials/header.ejs')%>
+
+
+        <div id="buttons">
+        <form>
+        <button class="buttons" type="submit" formmethod="GET" formaction = "/connections/<%= event.id%>/edit">Edit</button>  
+        <button class="buttons" type="submit" formmethod="POST" formaction = "/connections/<%= event.id%>?_method=DELETE">Delete</button> 
+        </form>
+
+        </div>
+        <div>
+        <h2><%= event.name%></h2>
+        <h3>Details: <%= event.details%></h3>
+        <p>Date: <%= event.date%></p>
+        <p><%= event.start%> - <%= event.end%></p>
+        <p>Host: <%= event.host%></p>
+        <img src="<%= event.image %>">
+    </div>
+    </section>
+
+
+<%- include('../partials/footer.ejs')%>
