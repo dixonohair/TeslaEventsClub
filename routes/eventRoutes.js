@@ -1,21 +1,22 @@
 const express = require('express');
 const controller = require('../controllers/eventController');
+const {isLoggedIn, isAuthor} = require('../middlewares/auth');
 
 const router = express.Router();
 
 router.get('/connections', controller.index);
 
-router.get('/newConnection', controller.newConnection);
+router.get('/newConnection', isLoggedIn, controller.newConnection);
 
-router.post('/', controller.create);
+router.post('/', isLoggedIn, controller.create);
 
 router.get('/:id', controller.show);
 
-router.get('/:id/edit', controller.edit);
+router.get('/:id/edit', isLoggedIn, isAuthor, controller.edit);
 
-router.put('/:id', controller.update);
+router.put('/:id', isLoggedIn, isAuthor, controller.update);
 
-router.delete('/:id', controller.delete);
+router.delete('/:id', isLoggedIn, isAuthor, controller.delete);
 
 
 module.exports = router;

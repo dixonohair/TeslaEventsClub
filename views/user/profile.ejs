@@ -5,7 +5,7 @@
     <% if(events.length){ %>
         <p>You have created the following events:</p>
        <% events.forEach(event=>{%>
-            <a href = '/events/<%= event.id%>'><p><%= event.title%></p></a>
+            <a href = '/connections/<%= events.id%>'><p><%= event.name%></p></a>
        <%});
     } else{%>
         <p>You have not created any events</p>

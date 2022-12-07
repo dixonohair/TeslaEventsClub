@@ -37,7 +37,6 @@ exports.login = (req, res, next)=>{
     model.findOne({ email: email })
     .then(user => {
         if (!user) {
-            console.log('wrong email address');
             req.flash('error', 'wrong email address');  
             res.redirect('/users/login');
             } else {
@@ -62,8 +61,8 @@ exports.profile = (req, res, next)=>{
     let id = req.session.user;
     Promise.all([model.findById(id), Event.find({author: id})])
     .then(results=>{
-        const [user, stories] = results;
-        res.render('./user/profile', {user, stories});
+        const [user, events] = results;
+        res.render('./user/profile', {user, events});
     })
     .catch(err=>next(err));
 };

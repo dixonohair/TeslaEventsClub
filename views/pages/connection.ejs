@@ -3,11 +3,12 @@
 
 
         <div id="buttons">
+        <%if(user == story.author._id){%>
         <form>
         <button class="buttons" type="submit" formmethod="GET" formaction = "/connections/<%= event.id%>/edit">Edit</button>  
         <button class="buttons" type="submit" formmethod="POST" formaction = "/connections/<%= event.id%>?_method=DELETE">Delete</button> 
         </form>
-
+        <% } %>
         </div>
         <div>
         <h2><%= event.name%></h2>
