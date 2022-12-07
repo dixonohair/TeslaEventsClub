@@ -13,6 +13,7 @@ const eventSchema = new Schema({
     start: {type: String, required: [true, 'Start time is required']},
     end: {type: String, required: [true, 'End time is required']},
     host: {type: String, required: [true, 'Host is required']},
+    location: {type: String, required: [true, "Event must have a location"]},
     image: {type: String, required: [true, 'Image URL is required']}
 },
 {timestamps:true}
