@@ -18,5 +18,7 @@ router.put('/:id', isLoggedIn, isAuthor, controller.update);
 
 router.delete('/:id', isLoggedIn, isAuthor, controller.delete);
 
+//route to add user to rasvp schema when user clicks their chice
+router.put(':id/rsvp', isLoggedIn, isAuthor, controller.addRSVP);
 
 module.exports = router;

@@ -1,4 +1,5 @@
 const model = require('../models/events');
+const rsvp = require('../models/rsvp');
 
 exports.index = (req, res, next)=>{
     model.find()
@@ -116,4 +117,9 @@ exports.delete = (req, res, next)=>{
     
 };
 
+exports.addRSVP = (req, res, next)=>{
+    //add function of what happens when this is called
+    //then redirect/refresh to the connection page with the updated number. 
+    
 
+};

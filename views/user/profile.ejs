@@ -11,5 +11,40 @@
         <p>You have not created any events</p>
    <% }%>
 
+   <% if(events.length){ %>
+    <p>Your connections</p>
+   <table>
+    
+    <tr>
+        <th>Connection</th>
+        <th>Category</th>
+        <th>Actions</th>
+    </tr>
+    <% events.forEach(event=>{%>
+    <tr>
+        <td><%= event.name%></td>
+        <td><%= event.topic%></td>
+        <td>
+            <form>
+                <button class="buttons" type="submit" formmethod="GET" formaction = "/connections/<%= event.id%>/edit">Edit</button>  
+                <button class="buttons" type="submit" formmethod="POST" formaction = "/connections/<%= event.id%>?_method=DELETE">Delete</button> 
+            </form>
+        </td>
+    </tr>
+   </table>
+   <%});
+} else{%>
+    <p>You have not created any events</p>
+   <% }%>
+
+
+
+
+
+
+
+   <p>Your RSVPs</p>
+
+
 </div>
     <%- include('../partials/footer.ejs')%>
